@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
@@ -30,3 +31,7 @@ If you are developing a production application, we recommend enabling type-aware
 ```
 
 See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+=======
+# customer-support-dashboard
+A modern customer support dashboard built with React, TypeScript and Tailwind CSS for the Yellow.ai Frontend Engineer Internship Assignment.
+>>>>>>> a093cf041c3d06f8cbf889cef0335672c9f9e037
