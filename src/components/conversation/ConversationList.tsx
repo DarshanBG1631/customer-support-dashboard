@@ -1,5 +1,6 @@
 import { Search } from "lucide-react";
 import ConversationCard from "./ConversationCard";
+import AnalyticsCards from "../dashboard/AnalyticsCards";
 import type { Conversation } from "../../types/conversation";
 
 interface Props {
@@ -25,9 +26,7 @@ const ConversationList = ({
   statusFilter,
   setStatusFilter,
 }: Props) => {
-
   const filteredConversations = conversations.filter((conversation) => {
-
     const matchesSearch =
       conversation.customerName
         .toLowerCase()
@@ -41,35 +40,45 @@ const ConversationList = ({
       conversation.status === statusFilter;
 
     return matchesSearch && matchesStatus;
-
   });
 
   return (
-    <section className="bg-[#F8FAFC] border-r h-screen flex flex-col">
+    <section className="w-[420px] bg-slate-50 border-r flex flex-col">
 
       {/* Header */}
+      <div className="sticky top-0 bg-white z-10 border-b shadow-sm p-5">
 
-      <div className="p-5 bg-white border-b shadow-sm">
+        <div className="flex justify-between items-center">
 
-        <div className="flex items-center justify-between">
+          <div>
+            <h2 className="text-2xl font-bold text-gray-800">
+              Conversations
+            </h2>
 
-          <h2 className="text-xl font-bold">
-            Conversations
-          </h2>
+            <p className="text-sm text-gray-500">
+              Manage customer tickets
+            </p>
+          </div>
 
-          <span className="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-sm font-semibold">
+          <span className="bg-yellow-400 text-white px-3 py-1 rounded-full text-sm font-bold">
             {filteredConversations.length}
           </span>
 
         </div>
 
+        {/* Analytics */}
+
+        <div className="mt-5">
+          <AnalyticsCards conversations={conversations} />
+        </div>
+
         {/* Search */}
 
-        <div className="relative mt-4">
+        <div className="relative mt-5">
 
           <Search
-            className="absolute left-3 top-3 text-gray-400"
             size={18}
+            className="absolute left-4 top-4 text-gray-400"
           />
 
           <input
@@ -77,14 +86,14 @@ const ConversationList = ({
             placeholder="Search customer..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full bg-white border border-gray-300 rounded-xl pl-10 pr-4 py-3 outline-none focus:ring-2 focus:ring-yellow-400"
+            className="w-full rounded-xl border border-gray-200 bg-gray-50 py-3 pl-11 pr-4 outline-none transition-all focus:bg-white focus:ring-2 focus:ring-yellow-400"
           />
 
         </div>
 
         {/* Filters */}
 
-        <div className="flex gap-2 mt-4 flex-wrap">
+        <div className="flex gap-2 mt-5 flex-wrap">
 
           {["All", "Open", "Pending", "Resolved"].map((status) => (
 
@@ -99,10 +108,10 @@ const ConversationList = ({
                     | "Resolved"
                 )
               }
-              className={`px-4 py-2 rounded-xl text-sm transition-all ${
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                 statusFilter === status
-                  ? "bg-yellow-400 text-white shadow"
-                  : "bg-white border hover:bg-gray-100"
+                  ? "bg-yellow-400 text-white shadow-md"
+                  : "bg-white border border-gray-200 hover:bg-yellow-50 hover:border-yellow-400"
               }`}
             >
               {status}
@@ -114,9 +123,9 @@ const ConversationList = ({
 
       </div>
 
-      {/* Conversation List */}
+      {/* Conversation Cards */}
 
-      <div className="flex-1 overflow-y-auto p-4 space-y-3">
+      <div className="flex-1 overflow-y-auto px-4 py-5 space-y-4">
 
         {filteredConversations.length > 0 ? (
 
@@ -137,10 +146,8 @@ const ConversationList = ({
 
         ) : (
 
-          <div className="flex items-center justify-center h-full text-gray-500">
-
-            No conversations found.
-
+          <div className="flex h-full items-center justify-center text-gray-500">
+            No conversations found
           </div>
 
         )}

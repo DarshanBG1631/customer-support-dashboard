@@ -75,7 +75,7 @@ const Sidebar = () => {
               ${
                 menu.name === "Inbox"
                   ? "bg-yellow-100 text-yellow-700 font-semibold"
-                  : "hover:bg-gray-100"
+                  : "hover:bg-yellow-50 hover:text-yellow-700 hover:translate-x-2"
               }`}
             >
 
