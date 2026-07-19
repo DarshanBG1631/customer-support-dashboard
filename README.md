@@ -1,111 +1,98 @@
-# Yellow.ai Frontend Engineer Internship Assignment
+# 🟨 Yellow.ai Customer Support Dashboard
 
-## Candidate
+A modern and responsive Customer Support Dashboard built as part of the **Yellow.ai Frontend Engineer Internship Assignment**.
 
-**Name:** Darshan B G
-
----
-
-# Project Overview
+# 📌 Project Overview
 
 This project is a Customer Support Dashboard inspired by the Yellow.ai support inbox.
 
-The goal was to build a clean and responsive dashboard where support agents can:
+The dashboard helps support agents efficiently manage customer conversations through a clean and intuitive interface.
+
+### Key Functionalities
 
 - View customer conversations
 - Search conversations
-- Filter conversations based on status
-- Read chat history
-- Reply to customers
+- Filter conversations by status
+- View complete chat history
+- Send replies
 - Assign conversations
 - Resolve conversations
 - Escalate conversations
-- View customer information
-
-The application is completely built using React, TypeScript and Tailwind CSS.
+- View customer profile
 
 ---
 
-# Assignment Understanding
+# 🎯 Assignment Understanding
 
-Before writing code, I first analyzed the assignment document carefully.
+Before starting development, I carefully analyzed the assignment requirements to understand both the UI and functionality.
 
-I identified the major sections required in the dashboard.
+The dashboard was divided into the following modules:
 
 - Sidebar Navigation
 - Conversation List
 - Conversation Details
 - Customer Profile
-- Search functionality
+- Search Functionality
 - Status Filters
+- Conversation Actions
 - Responsive Layout
-- Clean UI
 
-After understanding the requirements, I planned the folder structure and component hierarchy before starting development.
-
----
-
-# Development Approach
-
-I developed the project in small steps instead of building everything together.
-
-### Step 1
-
-Created the React project using Vite.
-
-Installed the required dependencies.
-
-Configured Tailwind CSS.
-
-Created the basic folder structure.
+After identifying these requirements, I planned the folder structure and reusable component architecture before implementation.
 
 ---
 
-### Step 2
+# 🚀 Development Approach
 
-Created reusable components.
+The project was developed incrementally.
+
+### Step 1 – Project Setup
+
+- Created project using Vite + React + TypeScript
+- Configured Tailwind CSS
+- Installed dependencies
+- Planned folder structure
+
+---
+
+### Step 2 – UI Layout
+
+Built the overall dashboard layout:
 
 - Sidebar
+- Top Navigation
 - Conversation List
-- Conversation Card
 - Conversation Details
 
 ---
 
-### Step 3
+### Step 3 – Mock Data
 
-Created mock conversation data.
-
-Designed the conversation interface using TypeScript.
-
-Connected the UI with mock data.
+- Created conversation interfaces
+- Added mock conversation data
+- Connected UI with data
 
 ---
 
-### Step 4
+### Step 4 – Conversation Selection
 
 Implemented conversation selection.
 
-Selecting a conversation updates the right-side chat window.
+Selecting a conversation updates the chat window dynamically.
 
 ---
 
-### Step 5
+### Step 5 – Search Feature
 
-Implemented search functionality.
-
-Users can search conversations using:
+Implemented search functionality using:
 
 - Customer Name
 - Email Address
 
 ---
 
-### Step 6
+### Step 6 – Status Filters
 
-Implemented conversation filtering.
-
-Added filters for:
+Implemented filters for:
 
 - All
 - Open
@@ -114,33 +101,27 @@ Added filters for:
 
 ---
 
-### Step 7
+### Step 7 – Conversation Actions
 
-Implemented conversation actions.
+Implemented:
 
-Added buttons for:
+- Assign Conversation
+- Resolve Conversation
+- Escalate Conversation
 
-- Assign
-- Resolve
-- Escalate
-
-The UI updates immediately after each action.
+UI updates immediately after every action.
 
 ---
 
-### Step 8
+### Step 8 – Chat Reply
 
-Implemented chat reply.
+Implemented message reply functionality.
 
-Support agents can type a reply.
-
-The message appears instantly in the chat window.
+New replies are instantly added to the conversation.
 
 ---
 
-### Step 9
-
-Added Customer Profile section.
+### Step 9 – Customer Profile
 
 Displays:
 
@@ -153,35 +134,22 @@ Displays:
 
 ---
 
-### Step 10
+### Step 10 – UI Enhancements
 
-Improved the overall UI.
-
-Made several design improvements including:
+Improved the overall user experience by adding:
 
 - Better spacing
 - Rounded cards
-- Better shadows
-- Hover animations
+- Hover effects
+- Toast notifications
 - Status badges
 - Priority badges
-- Cleaner typography
-- Improved conversation cards
+- Responsive layout
+- Improved typography
 
 ---
 
-# Technologies Used
-
-- React
-- TypeScript
-- Tailwind CSS
-- Vite
-- Lucide React Icons
-- React Toastify
-
----
-
-# Folder Structure
+# 🏗️ Architecture Overview
 
 ```
 src
@@ -197,102 +165,81 @@ src
 │
 ├── mock
 │
+├── pages
+│
 ├── types
 │
 └── App.tsx
 ```
 
----
+### State Management
 
-# Features
+The application uses React's **useState** hook for managing:
 
-✔ Sidebar Navigation
-
-✔ Search Conversations
-
-✔ Status Filters
-
-✔ Conversation List
-
-✔ Chat Window
-
-✔ Customer Profile
-
-✔ Assign Conversation
-
-✔ Resolve Conversation
-
-✔ Escalate Conversation
-
-✔ Send Reply
-
-✔ Responsive Layout
-
-✔ Modern UI
+- Conversation list
+- Selected conversation
+- Search state
+- Status filter
+- Chat replies
+- Ticket actions
 
 ---
 
-# Challenges Faced
+# 🛠️ Technologies Used
 
-While developing this assignment I faced several challenges:
-
-- Managing component communication
-- Updating conversation state correctly
-- Handling filters and search together
-- Designing a responsive layout
-- Maintaining reusable components
-
-These challenges helped improve my understanding of React state management and component architecture.
-
----
-
-# Learning Outcomes
-
-Through this assignment I improved my understanding of:
-
-- React Component Architecture
-- TypeScript Interfaces
-- State Management using useState
-- Component Reusability
+- React
+- TypeScript
 - Tailwind CSS
-- Responsive UI Design
-- Conditional Rendering
-- Event Handling
+- Vite
+- Lucide React
+- React Toastify
 
 ---
 
-# Future Improvements
+# ✨ Features
 
-If given more time, I would like to add:
-
-- Backend Integration
-- API Calls
-- Authentication
-- Dark Mode
-- Real-time Messaging
-- Charts & Analytics
-- Notifications
-- Pagination
-- User Roles
-- Theme Switching
+- Responsive Dashboard
+- Sidebar Navigation
+- Search Conversations
+- Status Filters
+- Conversation List
+- Customer Chat Window
+- Customer Profile
+- Assign Conversation
+- Resolve Conversation
+- Escalate Conversation
+- Reply to Customer
+- Toast Notifications
 
 ---
 
-# Run Project
+# ⚙️ Setup Instructions
 
-Install dependencies
+### Clone Repository
+
+```bash
+git clone https://github.com/DarshanBG1631/customer-support-dashboard.git
+```
+
+### Navigate to Project
+
+```bash
+cd customer-support-dashboard
+```
+
+### Install Dependencies
 
 ```bash
 npm install
 ```
 
-Start development server
+### Start Development Server
 
 ```bash
 npm run dev
 ```
 
-Build project
+### Build Project
 
 ```bash
 npm run build
@@ -300,8 +247,96 @@ npm run build
 
 ---
 
-# Thank You
+# 📂 Folder Structure
+
+```
+src
+│
+├── components
+├── layouts
+├── mock
+├── pages
+├── types
+└── App.tsx
+```
+
+---
+
+# ⚠️ Known Limitations
+
+- Uses mock data instead of backend APIs.
+- No authentication.
+- Chat messages are not persisted after refresh.
+- No real-time messaging.
+- Analytics are static.
+- No pagination.
+
+---
+
+# 📚 Challenges Faced
+
+During development, I encountered the following challenges:
+
+- Managing state between components
+- Combining search and filters
+- Updating conversations after actions
+- Designing reusable components
+- Building a responsive dashboard
+
+These challenges helped strengthen my understanding of React architecture and state management.
+
+---
+
+# 📖 Learning Outcomes
+
+Through this assignment I improved my understanding of:
+
+- React Component Architecture
+- TypeScript Interfaces
+- React State Management
+- Component Reusability
+- Tailwind CSS
+- Responsive Design
+- Event Handling
+- Conditional Rendering
+
+---
+
+# 🚀 Future Improvements
+
+Given additional development time, I would like to add:
+
+- Backend Integration
+- REST APIs
+- Authentication
+- Dark Mode
+- Real-time Chat
+- Notifications
+- Analytics Dashboard
+- Pagination
+- User Roles
+- Theme Switching
+
+---
+
+# ⏱️ Approximate Time Spent
+
+| Task | Time |
+|------|------|
+| Requirement Analysis | 1 Hour |
+| Project Setup | 30 Minutes |
+| UI Development | 5 Hours |
+| Feature Implementation | 4 Hours |
+| UI Improvements | 2 Hours |
+| Testing & Bug Fixing | 2 Hours |
+| Documentation | 1 Hour |
+
+**Total Time Spent:** **15–16 Hours**
+
+---
+
+# 🙏 Thank You
 
 Thank you for reviewing my submission.
 
-I enjoyed working on this assignment and learned a lot while building it.
+This assignment provided an excellent opportunity to strengthen my React, TypeScript, and frontend development skills. I focused on building a clean, modular, and maintainable solution while following the assignment requirements.
