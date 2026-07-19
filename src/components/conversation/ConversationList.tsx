@@ -26,7 +26,8 @@ const ConversationList = ({
   statusFilter,
   setStatusFilter,
 }: Props) => {
-  const filteredConversations = conversations.filter((conversation) => {
+  const filteredConversations = conversations
+  .filter((conversation) => {
     const matchesSearch =
       conversation.customerName
         .toLowerCase()
@@ -40,8 +41,8 @@ const ConversationList = ({
       conversation.status === statusFilter;
 
     return matchesSearch && matchesStatus;
-  });
-
+  })
+  .sort((a, b) => b.unreadCount - a.unreadCount);
   return (
     <section className="w-[420px] bg-slate-50 border-r flex flex-col">
 
