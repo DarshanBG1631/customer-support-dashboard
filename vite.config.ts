@@ -3,6 +3,11 @@ import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
+  base:
+    process.env.VERCEL
+      ? "/"
+      : "/customer-support-dashboard/",
+
   plugins: [
     react(),
     tailwindcss(),
