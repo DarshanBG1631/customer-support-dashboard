@@ -24,7 +24,7 @@ const CustomerProfile = ({ conversation }: Props) => {
     <aside className="h-full bg-white p-6 overflow-y-auto">
 
       <h2 className="text-xl font-bold mb-6">
-        Customer Profile
+        Customer Profile information
       </h2>
 
       {/* Avatar */}
