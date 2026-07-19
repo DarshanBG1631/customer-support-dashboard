@@ -2,7 +2,6 @@ import {
   Bell,
   Search,
   Moon,
-  Sun,
 } from "lucide-react";
 
 const TopNavbar = () => {
